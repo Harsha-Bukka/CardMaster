@@ -1,8 +1,10 @@
-package com.cts.model;
+package com.CardMaster.model;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import lombok.Data;
 
+import java.time.LocalDateTime;
+@Data
 @Entity
 @Table(name = "portfolioreport")
 public class PortfolioReport {
@@ -20,5 +22,5 @@ public class PortfolioReport {
     @Column(nullable = false)
     private LocalDateTime generatedDate = LocalDateTime.now();
 
-    // getters and setters
+
 }
