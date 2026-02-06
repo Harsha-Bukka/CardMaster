@@ -1,7 +1,5 @@
 package com.CardMaster.model;
-import com.CardMaster.model.RiskAlert;
 
-import com.CardMaster.model.User;
 import jakarta.persistence.*;
 import lombok.Data;
 
