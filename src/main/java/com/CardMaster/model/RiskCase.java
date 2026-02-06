@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-package  com.CardMaster.model;
-
-import com.CardMaster.model.RiskAlert;
-=======
 package com.CardMaster.model;
+import com.CardMaster.model.RiskAlert;
 
->>>>>>> origin/main
 import com.CardMaster.model.User;
 import jakarta.persistence.*;
 import lombok.Data;
