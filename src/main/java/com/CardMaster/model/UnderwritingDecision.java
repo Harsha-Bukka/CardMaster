@@ -1,5 +1,7 @@
 package com.CardMaster.model;
 
+import com.CardMaster.Enum.DecisionTypeEnum;
+import com.CardMaster.model.User;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -19,8 +21,12 @@ public class UnderwritingDecision {
     @JoinColumn(name = "underwriterid", nullable = false)
     private User underwriter;
 
-    private String decision; // Approve / Reject / Conditional
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private DecisionTypeEnum decision;  // Enum instead of String
+
     private Double approvedLimit;
+
     private String remarks;
 
     private LocalDateTime decisionDate = LocalDateTime.now();

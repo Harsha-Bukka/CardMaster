@@ -38,7 +38,7 @@ public class Transaction {
     private LocalDateTime transactionDate;
 
     @ManyToOne
-    @JoinColumn(name = "CARD_ID")
+    @JoinColumn(Nname = "CARD_ID")
     private Card card;
 
     @ManyToOne
