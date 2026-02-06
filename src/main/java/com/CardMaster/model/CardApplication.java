@@ -1,5 +1,6 @@
 package com.CardMaster.model;
 
+import com.CardMaster.Enum.CardApplicaltionEnum;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDate;
@@ -20,6 +21,7 @@ public class CardApplication {
 
     private LocalDate applicationDate;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private CardApplicaltionEnum status;
 
 }

@@ -1,10 +1,13 @@
-package com.cts.model;
+package  com.CardMaster.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "portfolioreport")
+@Data
 public class PortfolioReport {
 
     @Id

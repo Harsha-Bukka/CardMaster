@@ -1,5 +1,6 @@
 package com.cts.model;
 
+import com.CardMaster.model.User;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 

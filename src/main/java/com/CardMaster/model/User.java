@@ -1,4 +1,5 @@
 package com.CardMaster.model;
+import com.CardMaster.Enum.UserEnum;
 import jakarta.persistence.*;
 import lombok.Data;
 @Data
@@ -9,7 +10,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     private String name;
-    private String role;
+    @Enumerated(EnumType.STRING)
+    // Store enum as string in DB
+    private UserEnum role;
     private String email;
     private String phone;
 }
