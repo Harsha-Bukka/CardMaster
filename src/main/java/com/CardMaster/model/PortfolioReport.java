@@ -1,31 +1,30 @@
-<<<<<<< HEAD
+
 package  com.CardMaster.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.time.LocalDateTime;
-=======
-package com.CardMaster.model;
+
 
 import jakarta.persistence.*;
 import lombok.Data;
->>>>>>> origin/main
+
 
 import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(name = "portfolioreport")
-@Data
 public class PortfolioReport {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long reportId;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 50)
     private String scope; // Product/Region/Period
 
+    @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "jsonb")
     private String metrics; // JSON string for flexibility
 

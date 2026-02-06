@@ -22,9 +22,11 @@ public class Notification {
     @Column(nullable = false)
     private String message;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private String category; // Payment, Transaction, Risk, Offer
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private String status = "Unread"; // Unread, Read, Dismissed
 
