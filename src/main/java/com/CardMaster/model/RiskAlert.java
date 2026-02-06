@@ -1,8 +1,11 @@
 package com.CardMaster.model;
 
+import com.CardMaster.model.Transaction;
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import lombok.Data;
 
+import java.time.LocalDateTime;
+@Data
 @Entity
 @Table(name = "riskalert")
 public class RiskAlert {
@@ -27,5 +30,5 @@ public class RiskAlert {
     @Column(nullable = false, length = 20)
     private String status = "Open"; // Open, Investigating, Closed
 
-    // getters and setters
+
 }

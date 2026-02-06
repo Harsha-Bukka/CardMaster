@@ -1,9 +1,12 @@
-package com.cts.model;
+package com.CardMaster.model;
 
 import com.CardMaster.model.User;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 @Entity
 @Table(name = "notification")
 public class Notification {
@@ -28,5 +31,5 @@ public class Notification {
     @Column(nullable = false)
     private LocalDateTime createdDate = LocalDateTime.now();
 
-    // getters and setters
+
 }
