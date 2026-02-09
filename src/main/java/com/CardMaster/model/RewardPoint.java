@@ -1,6 +1,6 @@
-package domain;
+package com.CardMaster.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity

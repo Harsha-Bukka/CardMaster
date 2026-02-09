@@ -1,4 +1,4 @@
-package repository;
+package com.CardMaster.dao;
 
 import domain.RewardRedemption;
 import org.springframework.data.jpa.repository.JpaRepository;

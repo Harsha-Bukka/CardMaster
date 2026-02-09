@@ -1,4 +1,4 @@
-package domain;
+package com.CardMaster.model;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package repository;
+package com.CardMaster.dao;
 
 import domain.Statement;
 import org.springframework.data.jpa.repository.JpaRepository;
