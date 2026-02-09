@@ -24,7 +24,7 @@ public class RiskCase {
     private String notes;
 
     @Column(nullable = false, length = 20)
-    private String status = "Open"; // Open, Investigating, Closed
+    private String status; // Open, Investigating, Closed
 
 
 }

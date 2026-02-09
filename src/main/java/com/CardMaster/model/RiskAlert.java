@@ -1,5 +1,6 @@
 package com.CardMaster.model;
 
+import com.CardMaster.Enum.RiskAlertStatusEnum;
 import com.CardMaster.model.Transaction;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -29,7 +30,7 @@ public class RiskAlert {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private String status = "Open"; // Open, Investigating, Closed
+    private RiskAlertStatusEnum status; // Open Investigating, Closed
 
 
 }
