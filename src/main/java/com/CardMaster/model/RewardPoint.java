@@ -1,7 +1,6 @@
-package model;
+package domain;
 
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity

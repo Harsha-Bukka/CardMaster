@@ -1,4 +1,4 @@
-package  com.CardMaster.model;
+package com.CardMaster.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
