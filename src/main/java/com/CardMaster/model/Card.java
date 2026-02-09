@@ -19,8 +19,10 @@ public class Card {
     private String cardNumber;
 
     @Column(name = "CARD_TYPE")
-    private String cardType;   // DEBIT / CREDIT
+    private String cardType;
+    // DEBIT / CREDIT
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "CARD_STATUS")
     private String cardStatus; // ACTIVE / BLOCKED
 

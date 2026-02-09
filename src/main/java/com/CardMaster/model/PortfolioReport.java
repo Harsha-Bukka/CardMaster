@@ -1,8 +1,17 @@
-package com.cts.model;
+
+package  com.CardMaster.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import java.time.LocalDateTime;
 
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+
+import java.time.LocalDateTime;
+@Data
 @Entity
 @Table(name = "portfolioreport")
 public class PortfolioReport {
@@ -11,14 +20,16 @@ public class PortfolioReport {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long reportId;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 50)
     private String scope; // Product/Region/Period
 
+    @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "jsonb")
     private String metrics; // JSON string for flexibility
 
     @Column(nullable = false)
     private LocalDateTime generatedDate = LocalDateTime.now();
 
-    // getters and setters
+
 }

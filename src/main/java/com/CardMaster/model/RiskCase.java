@@ -1,7 +1,9 @@
-package com.cts.model;
+package com.CardMaster.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "riskcase")
 public class RiskCase {
@@ -24,5 +26,5 @@ public class RiskCase {
     @Column(nullable = false, length = 20)
     private String status = "Open"; // Open, Investigating, Closed
 
-    // getters and setters
+
 }

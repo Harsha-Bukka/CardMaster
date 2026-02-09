@@ -1,8 +1,12 @@
-package com.cts.model;
+package com.CardMaster.model;
 
+import com.CardMaster.model.User;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 @Entity
 @Table(name = "notification")
 public class Notification {
@@ -18,14 +22,16 @@ public class Notification {
     @Column(nullable = false)
     private String message;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private String category; // Payment, Transaction, Risk, Offer
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private String status = "Unread"; // Unread, Read, Dismissed
 
     @Column(nullable = false)
     private LocalDateTime createdDate = LocalDateTime.now();
 
-    // getters and setters
+
 }

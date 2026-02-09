@@ -1,5 +1,6 @@
 package com.CardMaster.model;
 
+import com.CardMaster.Enum.TransactionChannel;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -26,13 +27,18 @@ public class Transaction {
     private String transactionType; // DEBIT / CREDIT
 
     @Column(name = "TRANSACTION_STATUS")
-    private String transactionStatus; // SUCCESS / FAILED / HOLD
+    private String transactionStatus;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "CHANNEL")
+    private TransactionChannel channel;
+
 
     @Column(name = "TRANSACTION_DATE")
     private LocalDateTime transactionDate;
 
     @ManyToOne
-    @JoinColumn(name = "CARD_ID")
+    @JoinColumn(Nname = "CARD_ID")
     private Card card;
 
     @ManyToOne
